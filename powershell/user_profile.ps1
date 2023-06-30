@@ -40,7 +40,7 @@ Set-Alias -Name cdp -Value dirProjects
 
 # Alias Git
 Set-Alias g git
-Set-Alias -Name gpom -Value getPushOrigin
+Set-Alias -Name gpom -Value getPushMain
 Set-Alias -Name gs -Value getStatus
 Set-Alias -Name ga -Value getAdd
 Set-Alias -Name gc -Value getCommit
