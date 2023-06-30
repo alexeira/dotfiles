@@ -21,6 +21,7 @@ $env:GIT_SSH = "C:\Windows\system32\OpenSSH\ssh.exe"
 function getStatus { git status }
 function getAdd { git add $args }
 function getCommit { git commit -m $args }
+function getPushMain { git push origin main }
 
 # Misc
 function backDir { cd .. }
@@ -29,7 +30,6 @@ function dirProjects { cd projects/ ; ll }
 # Alias
 Set-Alias vim nvim
 Set-Alias ll ls
-Set-Alias g git
 Set-Alias grep findstr
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
@@ -38,6 +38,9 @@ Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias -Name .. -Value backDir
 Set-Alias -Name cdp -Value dirProjects
 
+# Alias Git
+Set-Alias g git
+Set-Alias -Name gpom -Value getPushOrigin
 Set-Alias -Name gs -Value getStatus
 Set-Alias -Name ga -Value getAdd
 Set-Alias -Name gc -Value getCommit
