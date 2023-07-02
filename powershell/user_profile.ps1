@@ -22,6 +22,7 @@ function getStatus { git status }
 function getAdd { git add $args }
 function getCommit { git commit -m $args }
 function getPushMain { git push origin main }
+function getPull { git pull }
 
 # Misc
 function backDir { cd .. }
@@ -44,4 +45,4 @@ Set-Alias -Name gpom -Value getPushMain
 Set-Alias -Name gs -Value getStatus
 Set-Alias -Name ga -Value getAdd
 Set-Alias -Name gc -Value getCommit
-
+Set-Alias -Name gp -Value getPull
