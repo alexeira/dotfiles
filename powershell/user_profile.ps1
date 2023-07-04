@@ -1,5 +1,6 @@
 # Remove Defaults
 rename-item alias:\gc gk -force
+rename-item alias:\gp gpp -force
 
 # PSReadLine
 Set-PSReadLineOption -EditMode Emacs
