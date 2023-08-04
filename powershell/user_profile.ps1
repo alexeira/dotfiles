@@ -22,8 +22,10 @@ $env:GIT_SSH = "C:\Windows\system32\OpenSSH\ssh.exe"
 function getStatus { git status }
 function getAdd { git add $args }
 function getCommit { git commit -m $args }
-function getPushMain { git push origin main }
-function getPull { git pull }
+function getPushMain { git push -u origin main }
+function getPull { git pull $args }
+function getBranch { git branch $args }
+function getSwitch { git switch $args }
 
 # Misc
 function backDir { cd .. }
@@ -47,3 +49,5 @@ Set-Alias -Name gs -Value getStatus
 Set-Alias -Name ga -Value getAdd
 Set-Alias -Name gc -Value getCommit
 Set-Alias -Name gp -Value getPull
+Set-Alias -Name gb -Value getBranch
+Set-Alias -Name gsw -Value getSwitch
