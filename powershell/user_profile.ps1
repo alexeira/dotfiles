@@ -30,6 +30,8 @@ function getSwitch { git switch $args }
 # Misc
 function backDir { cd .. }
 function dirProjects { cd projects/ ; ll }
+function toNeovimFolder { cd appdata/local/nvim ; ll }
+function toPowerShellFolder { cd .config/powershell/ ; ll }
 
 # Alias
 Set-Alias vim nvim
@@ -41,6 +43,8 @@ Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 # Alias Name Value
 Set-Alias -Name .. -Value backDir
 Set-Alias -Name cdp -Value dirProjects
+Set-Alias -Name cdvim -Value toNeovimFolder
+Set-Alias -Name cdpwsh -Value toPowerShellFolder
 
 # Alias Git
 Set-Alias g git
