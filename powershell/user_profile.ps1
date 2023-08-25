@@ -24,6 +24,7 @@ function getPushMain { git push -u origin main }
 function getPull { git pull $args }
 function getBranch { git branch $args }
 function getSwitch { git switch $args }
+function getRemote { git remote $args }
 
 # Functions CLI
 function eslintReactTs { pnpm add -D prettier eslint eslint-config-prettier eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-n eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/parser @typescript-eslint/eslint-plugin }
@@ -58,6 +59,7 @@ Set-Alias -Name gc -Value getCommit
 Set-Alias -Name gp -Value getPull
 Set-Alias -Name gb -Value getBranch
 Set-Alias -Name gsw -Value getSwitch
+Set-Alias -Name gr -Value getRemote
 
 # Eslint & Prettier
 Set-Alias -Name eslint-react-ts -Value eslintReactTs
