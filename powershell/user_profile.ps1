@@ -1,6 +1,8 @@
 # Remove Defaults
 rename-item alias:\gc gk -force
 rename-item alias:\gp gpp -force
+rename-item alias:\gcm gcmm -force
+rename-item alias:\gl glct -force
 
 # PSReadLine
 Set-PSReadLineOption -EditMode Emacs
@@ -19,7 +21,9 @@ $env:GIT_SSH = "C:\Windows\system32\OpenSSH\ssh.exe"
 # Functions Git Alias
 function getStatus { git status }
 function getAdd { git add $args }
-function getCommit { git commit -m $args }
+function getCommit { git commit $args }
+function getCommitMessage { git commit -m $args }
+function getCommitAllMessage { git commit -am $args }
 function getPush { git push $args }
 function getPushMain { git push -u origin main }
 function getPull { git pull $args }
@@ -27,6 +31,7 @@ function getBranch { git branch $args }
 function getSwitch { git switch $args }
 function getRemote { git remote $args }
 function getClone { git clone $args }
+function getLog { git log $args }
 
 # Functions CLI
 function eslintReactTs { pnpm add -D prettier eslint eslint-config-prettier eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-n eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/parser @typescript-eslint/eslint-plugin }
@@ -58,12 +63,15 @@ Set-Alias -Name gpom -Value getPushMain
 Set-Alias -Name gs -Value getStatus
 Set-Alias -Name ga -Value getAdd
 Set-Alias -Name gc -Value getCommit
+Set-Alias -Name gcm -Value getCommitMessage
+Set-Alias -Name gcam -Value getCommitAllMessage
 Set-Alias -Name gp -Value getPull
 Set-Alias -Name gpsh -Value getPush
 Set-Alias -Name gb -Value getBranch
 Set-Alias -Name gsw -Value getSwitch
 Set-Alias -Name gr -Value getRemote
 Set-Alias -Name gcl -Value getClone
+Set-Alias -Name gl -Value getLog
 
 # Eslint & Prettier
 Set-Alias -Name eslint-react-ts -Value eslintReactTs
