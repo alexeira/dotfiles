@@ -4,7 +4,6 @@
     {
       "alignment": "left",
       "segments": [
-       
         {
           "foreground": "cyan",
           "properties": {
@@ -22,6 +21,12 @@
           "style": "plain",
           "template": ":: {{ .HEAD }}{{ .BranchStatus }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }} ",
           "type": "git"
+        },
+        {
+          "type": "node",
+          "style": "plain",
+          "foreground": "#6CA35E",
+          "template": "  {{ .Full }} "
         }
       ],
       "type": "prompt"
