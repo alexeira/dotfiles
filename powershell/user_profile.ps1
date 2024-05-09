@@ -50,6 +50,10 @@ function dirProjects { cd projects/ ; ll }
 function toNeovimFolder { cd appdata/local/nvim ; ll }
 function toPowerShellFolder { cd .config/powershell/ ; ll }
 function toHelixFolder { cd appdata/roaming/helix ; ll }
+function toRootDirectory {
+  $rootDirectory = "C:\Users\alexp.HPDEV"
+  Set-Location -Path $rootDirectory
+}
 
 # Alias General
 Set-Alias vim nvim
@@ -64,6 +68,7 @@ Set-Alias -Name cdp -Value dirProjects
 Set-Alias -Name cdvim -Value toNeovimFolder
 Set-Alias -Name cdpwsh -Value toPowerShellFolder
 Set-Alias -Name cdhx -Value toHelixFolder
+Set-Alias -Name home -Value toRootDirectory
 
 # Alias Rust
 Set-Alias -Name rsup -Value rustup
