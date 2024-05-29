@@ -48,11 +48,21 @@ function customNvmUse {
 function backDir { cd .. }
 function dirProjects { cd projects/ ; ll }
 function toNeovimFolder { cd appdata/local/nvim ; ll }
-function toPowerShellFolder { cd .config/powershell/ ; ll }
-function toHelixFolder { cd appdata/roaming/helix ; ll }
+function toPowerShellFolder { 
+  $pwshDirectory = "C:\Users\alexp.HPDEV\.config\powershell"
+  Set-Location -Path $pwshDirectory ; ll
+}
+function toHelixFolder { 
+  $helixDirectory = "C:\Users\alexp.HPDEV\AppData\Roaming\helix"
+  Set-Location -Path $helixDirectory ; ll 
+}
 function toRootDirectory {
   $rootDirectory = "C:\Users\alexp.HPDEV"
   Set-Location -Path $rootDirectory
+}
+function toHosts {
+  $hostsPath = "C:\Windows\System32\drivers\etc"
+  Set-Location -Path $hostsPath
 }
 
 # Alias General
@@ -69,6 +79,7 @@ Set-Alias -Name cdvim -Value toNeovimFolder
 Set-Alias -Name cdpwsh -Value toPowerShellFolder
 Set-Alias -Name cdhx -Value toHelixFolder
 Set-Alias -Name home -Value toRootDirectory
+Set-Alias -Name hosts -Value toHosts
 
 # Alias Rust
 Set-Alias -Name rsup -Value rustup
