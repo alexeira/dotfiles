@@ -5,7 +5,7 @@ rename-item alias:\gcm gcmm -force
 rename-item alias:\gl glct -force
 
 # PSReadLine
-Set-PSReadLineOption -EditMode Emacs
+Set-PSReadLineOption -EditMode Windows
 Set-PSReadLineOption -BellStyle None
 Set-PSReadLineOption -PredictionSource History
 
@@ -71,6 +71,8 @@ Set-Alias ll ls
 Set-Alias grep findstr
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
+Set-Alias p pnpm
+Set-Alias b bun
 
 # Alias Folders
 Set-Alias -Name .. -Value backDir
