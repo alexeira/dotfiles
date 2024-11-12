@@ -35,6 +35,7 @@ function getSwitch { git switch $args }
 function getRemote { git remote $args }
 function getClone { git clone $args }
 function getLog { git log $args }
+function getCheckout { git checkout $args }
 
 # Functions CLI
 function eslintReactTs { pnpm add -D prettier eslint eslint-config-prettier eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-n eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/parser @typescript-eslint/eslint-plugin }
@@ -65,6 +66,16 @@ function toHosts {
   Set-Location -Path $hostsPath
 }
 
+# shadcn
+#   pnpm
+function pnpmSnip {
+ pnpm dlx shadcn@latest add $args
+}
+
+# npm
+#  scripts
+function runStartVerbose { npm run start --verbose }
+
 # Alias General
 Set-Alias vim nvim
 Set-Alias ll ls
@@ -73,6 +84,7 @@ Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias p pnpm
 Set-Alias b bun
+Set-Alias d docker
 
 # Alias Folders
 Set-Alias -Name .. -Value backDir
@@ -103,9 +115,16 @@ Set-Alias -Name gsw -Value getSwitch
 Set-Alias -Name gr -Value getRemote
 Set-Alias -Name gcl -Value getClone
 Set-Alias -Name gl -Value getLog
+Set-Alias -Name gck -Value getCheckout
 
 # Eslint & Prettier
 Set-Alias -Name eslint-react-ts -Value eslintReactTs
 
 # Alias NVM
 Set-Alias -Name nvmu -Value customNvmUse
+
+# Alias shadcn
+Set-Alias -Name shadp -Value pnpmSnip
+
+# Alias npm
+Set-Alias -Name nrsv -Value runStartVerbose
